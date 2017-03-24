@@ -1,0 +1,40 @@
+.disclaimer {
+    width : auto;
+    text-align : right;
+}
+
+.container {
+    width : 283px !important;
+    border : 1px solid black;
+}
+
+.form-control.from,.form-control.to {
+    width : 79px !important;
+    display : inline;
+}
+
+.form-control.fromVal, .form-control.toVal {
+    width : 163px !important;
+    display :inline;
+}
+
+.exchange {
+    width : 300px !important;
+}
+
+.value {
+    text-align: right;
+    color: #ff7f50;
+}
+
+.disclaimerLink {
+    color: #337ab7;
+    text-decoration: underline !important;
+    -moz-text-decoration-color: #337ab7;
+}
+
+.disclaimerLink:visited {
+    text-decoration: underline;
+    -moz-text-decoration-color: darkred;
+    color: darkred;
+}

@@ -1,0 +1,41 @@
+<!Doctype HTML>
+<html ng-app="currencyConverter" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Currency converter</title>
+            
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="vendor_assets/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="vendor_assets/bootstrap-theme.min.css">
+        
+        <!-- AngularJS -->
+        <script src="vendor_assets/angular.min.js"></script>
+        
+        <!-- Local stying and scripting files include -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="js/currencyConverter.js"></script>
+    </head>
+    <body ng-controller="converter">
+        <br><br><br>
+        <div class="container">
+            <h3>Currency converter</h3><hr>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>Type in amount and select currency:</label><br>
+                    <input id="fromVal" type="text" ng-keydown="validate($event)" ng-model="fromValue" ng-change="calculate()" ng-focus="selectFocus($event)" ng-maxlength="10" placeholder="0.00" class="form-control fromVal" />
+                    <select id="from" ng-model="fromCurrency" ng-change="calculate()" ng-options="cur for cur in currencies" ng-focus="selectFocus($event)" class="form-control from"></select>
+                    <br><br>
+                    <label>Converted amount:</label><br>
+                    <input id="toVal" type="text" ng-model="toValue" ng-maxlength="10" placeholder="0.00" class="form-control toVal" readonly/>
+                    <select id="to" ng-model="toCurrency" ng-change="calculate()" ng-options="cur for cur in currencies" ng-focus="selectFocus($event)" ng-maxlength="10" class="form-control to"></select>
+                    <br><br>
+                    <div class="disclaimer">
+                            <a href="disclaimer.html" class=".diclaimerLink" target="_blank">Disclaimer</a>
+                    </div><br>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

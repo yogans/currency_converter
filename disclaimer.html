@@ -1,0 +1,29 @@
+<!Doctype HTML>
+<html ng-app="currencyConverter" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exchange Rates</title>
+            
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="vendor_assets/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="vendor_assets/bootstrap-theme.min.css">
+        
+        <!-- AngularJS -->
+        <script src="vendor_assets/angular.min.js"></script>
+        
+        <!-- Local stying and scripting files include -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="js/currencyConverter.js"></script>
+    </head>
+    <body ng-controller="rates">
+        <br><br><br>
+        <div class="container exchange">
+            <h3>Exchange Rates Today:</h3><hr>
+                <p ng-repeat="(key,value) in exchangeData">
+                    <label>Currency {{key}} : <span class="value">{{value}}</span></label>
+                </p>
+        </div>
+    </body>
+</html>
